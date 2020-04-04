@@ -25,7 +25,7 @@ export default class MessageViewer extends PureComponent {
     MessageViewer.instance = this;
   }
 
-  //Metodo a ser chamado pelo metodo estátio addMessage.
+  //Metodo a ser chamado pelo metodo estático addMessage.
   localAddMessage(message) {
     const { messages: preMessages } = this.state;
     this.setState({ messages: [...preMessages, message] })

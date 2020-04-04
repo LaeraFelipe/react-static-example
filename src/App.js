@@ -6,7 +6,9 @@ function App() {
   const [inputValue, setinputValue] = useState('')
 
   function handleSendMessage() {
+    //Chamando nosso método de adicionar mensagem.
     MessageViewer.addMessage(inputValue);
+    //Resetando estado do input.
     setinputValue('');
   }
 
