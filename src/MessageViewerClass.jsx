@@ -1,10 +1,10 @@
 import React, { PureComponent } from 'react'
 
 export default class MessageViewer extends PureComponent {
-  /**Instancia para ser chamada quando adicionar mensagem. */
+  //Instancia para ser chamada quando adicionar mensagem.
   static instance;
 
-  /**Método estátio para adicionar mensagens. */
+  //Método estátio para adicionar mensagens.
   static addMessage(message) {
     if (this.instance != null) {
       //Chamando o método da instância do componente.
