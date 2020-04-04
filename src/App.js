@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import MessageViewer from './MessageViewFC';
+import MessageViewer from './MessageViewerFC';
 import './App.css';
 
 function App() {

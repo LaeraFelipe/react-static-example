@@ -34,7 +34,7 @@ export default class MessageViewer extends PureComponent {
   render() {
     const { messages } = this.state;
     return (
-      <div className="message-viwer">
+      <div className="message-viewer">
         {
           messages.map((message, index) => (<div key={index} className="message-viwer__message">{message}</div>))
         }

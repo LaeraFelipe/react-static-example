@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import { useEffect } from 'react';
 
-export default function MessageView() {
+export default function MessageViewer() {
   const [messages, setMessages] = useState([]);
 
   //Atualizando o contexto de addMessageRef para referenciar as mensagens antigas.
   useEffect(() => {
-    MessageView.addMessageRef = localAddMessage.bind({ messages });
+    MessageViewer.addMessageRef = localAddMessage.bind({ messages });
   }, [messages])
 
   //Metodo a ser chamado pelo metodo estátio addMessage.
@@ -15,7 +15,7 @@ export default function MessageView() {
   }
 
   return (
-    <div className="message-viwer">
+    <div className="message-viewer">
       {
         messages.map((message, index) => (<div key={index} className="message-viwer__message">{message}</div>))
       }
@@ -23,9 +23,9 @@ export default function MessageView() {
   )
 }
 
-MessageView.addMessageRef = undefined;
+MessageViewer.addMessageRef = undefined;
 
-MessageView.addMessage = function (message) {
+MessageViewer.addMessage = function (message) {
   if (this.addMessageRef != null) {
     //Chamando o método do componente.
     this.addMessageRef(message);
